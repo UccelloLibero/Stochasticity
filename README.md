@@ -1,11 +1,20 @@
 # Random Image and Message Web App
 
-This web application displays a random image along with a random message on the whole viewport. It uses Python, Flask, and HTML.
+This web application displays a random image along with a random message on the whole viewport. It uses Python, Flask, HTML JavaScript and AJAX.
 
 ## Features
 
+### Display Random Image and Message
+
 - Display a random image from the 'static/images' folder.
 - Show a random message on top of the image.
+
+### Dynamic Content Update
+
+- Periodic update of image and message using JavaScript and AJAX.
+
+### Navigation Bar and Footer
+
 - Navigation bar with links to the homepage, an "About" page and GitHub repository for this project.
 - Footer with a copyright notice.
 
