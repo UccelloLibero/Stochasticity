@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Random Image and Message Web App</title>
+    <style>
+        body {
+            margin: 0;
+            /* font-family: Arial, sans-serif; */
+            background-color: #f0f0f0;
+            line-height: 1.5;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            overflow-y: auto; /* Enable vertical scrolling for content */
+        }
+
+        .content a:link {
+            color: indigo;
+            text-decoration: none;
+        }
+
+        .content a:visited {
+            color: indigo;
+        }
+
+        .content a:hover {
+            color: green;
+        }
+
+        .credits {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            bottom: 1;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Scrollable Content for Small Screens */
+        @media only screen and (max-width: 600px) {
+            body {
+                overflow: auto;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            /* Styles for small screens (phones) */
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            /* Styles for medium screens (tablets) */
+            nav {
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            /* Styles for large screens (laptops and desktops) */
+            nav {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/UccelloLibero/randomness" target="_blank" title="GitHub">GitHub</a>
+    </nav>
+    <div class="content">
+        <h1>About Random Image and Message Web App</h1>
+        <p>This web application is a simple project developed to showcase a random image and message. It is powered by Python, Flask, HTML, JavaScript and AJAX.</p>
+        <p>The primary purpose of developing this project was to enhance my learning and proficiency in web development using Python, Flask, JavaScript and AJAX.</p>
+        <p>The goal of incorporating Biology and nature as the theme for both images and messages serves an educational purpose. By showcasing random images inspired by nature and pairing them with messages derived from Biology, the project aims to provide a visually engaging and informative experience.</p>
+        <p>This fusion of technology and educational content underscores the versatility of web development as a tool for learning and creative expression.</p>
+
+        <h2 class="credits">Credits</h2>
+        <p>The random images displayed on this website are sourced from talented photographers on <a href="https://unsplash.com/" target="_blank" title="Unsplash">Unsplash</a>.</p>
+        <p>Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile photos from Unsplash to replicate a similar or competing service.</p>
+        <p>Definitions for the random messages are inspired by the content from <a href="https://openstax.org/details/books/biology-2e?Book%20details" target="_blank" title="Biology 2e">"Biology 2e"</a> book.</p>
+        <p>Clark, A. M., Douglas, M., & Choi, J. (2018, March 28). Biology 2e. OpenStacks. <a href="https://openstax.org/details/books/biology-2e?Book%20details" target="_blank" title="Biology 2e">https://openstax.org/details/books/biology-2e?Book%20details</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; Maya 2024</p>
+    </footer>
+</body>
+</html>
