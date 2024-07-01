@@ -25,18 +25,10 @@ This web application displays a random image along with a random message on the 
 - 'static/images/': Folder containing random images.
 - 'README.md': Documentation for the project.
 
-## Customization
-
-- Add or replace images in the 'static/images/' folder to change the pool of random images.
-- Update messages in the 'app.py' file to customize the random messages.
-
 ## Deployment
 
 This project was developed as a personal learning project and is hosted on Heroku. 
-
-## Contributions 
-
-Contributions are welcome! If you'd like to imporve this project, open an issue or submit a pull request. 
+You can enjoy it here [Stochasticity](https://stochasticity-1bce0bf05f19.herokuapp.com/) 
 
 ## License
 

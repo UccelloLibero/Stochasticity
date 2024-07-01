@@ -150,7 +150,7 @@
             GitHub
         </a>
     </nav>
-    <div id="content-container">
+    <div id="content-container" onclick="updateContent()" ontouchstart="updateContent()">
         <div class="image-overlay"></div> <!-- Overlay added here -->
         <img id="update-image" src="{{ url_for('static', filename='images/' + image_filename) }}" alt="Random Image">
         <div class="message" id="update-message"> {{ random_message }}</div>
