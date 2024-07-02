@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stochasticity</title>
     <style>
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
         }
 
         nav {
@@ -24,7 +26,7 @@
         }
 
         nav a {
-            color:#fbfcff;
+            color: #fbfcff;
             text-decoration: none;
             margin-right: 15px;
         }
@@ -37,6 +39,8 @@
             position: relative;
             flex: 1;
             width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         img {
@@ -88,23 +92,6 @@
             color: #9bc13b;
         }
 
-        /* Scrollable Content for Small Screens */
-        /* @media only screen and (max-width: 600px) {
-            nav {
-                width: 100%;
-            }
-
-            .message {
-                font-size: 14px;
-            }
-
-            footer {
-                font-size: 12px;
-                width: 100%;
-            }
-        }  */
-
-        /* Media Queries */
         @media only screen and (max-width: 600px) {
             nav {
                 flex-direction: column;
@@ -118,9 +105,9 @@
 
             #content-container {
                 width: 100%;
-        }
+            }
 
-        .message {
+            .message {
                 font-size: 14px;
             }
 
@@ -162,13 +149,15 @@
     <div id="content-container" onclick="updateContent()" ontouchstart="updateContent()">
         <div class="image-overlay"></div> <!-- Overlay added here -->
         <img id="update-image" src="{{ url_for('static', filename='images/' + image_filename) }}" alt="Random Image">
-        <div class="message" id="update-message"> {{ random_message }}</div>
+        <div class="message" id="update-message">{{ random_message }}</div>
     </div>
     <footer id="update-footer">
         <p>&copy; Maya 2024</p>
     </footer>
     <script>
-        // Function to update content 
+        let intervalId;
+
+        // Function to update content
         function updateContent() {
             fetch('/update-content')
                 .then(response => response.json())
@@ -182,19 +171,27 @@
                         img.onerror = reject;
                         img.src = data.image_url;
                     });
-    
+
                     imagePromise.then(() => {
                         document.getElementById('update-message').innerText = data.random_message;
                     });
                 })
                 .catch(error => console.error('Error:', error));
+
+            // Clear the previous interval and set a new one
+            clearInterval(intervalId);
+            intervalId = setInterval(updateContent, 42000); // 42 seconds
         }
-    
+
         // Initial update
         updateContent();
-    
-        // Periodically update content every 30 seconds
-        setInterval(updateContent, 30000);
+
+        // Set the interval to update content every 42 seconds
+        intervalId = setInterval(updateContent, 42000); // 42 seconds
+
+        // Event listeners for manual update
+        document.getElementById('content-container').addEventListener('click', updateContent);
+        document.getElementById('content-container').addEventListener('touchstart', updateContent);
     </script>
 </body>
 </html>
