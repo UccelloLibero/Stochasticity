@@ -125,7 +125,7 @@
             }
         }
 
-        @media only screen and (min-width: 600px) and (max-width: 1024px) {
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
             nav {
                 font-size: 18px;
             }
@@ -165,9 +165,13 @@
     <script>
         let intervalId;
         let debounceTimeout;
+        let isUpdating = false;
 
         // Function to update content
         function updateContent() {
+            if (isUpdating) return;
+            isUpdating = true;
+
             fetch('/update-content')
                 .then(response => response.json())
                 .then(data => {
@@ -183,9 +187,13 @@
 
                     imagePromise.then(() => {
                         document.getElementById('update-message').innerText = data.random_message;
+                        isUpdating = false;
                     });
                 })
-                .catch(error => console.error('Error:', error));
+                .catch(error => {
+                    console.error('Error:', error);
+                    isUpdating = false;
+                });
 
             // Clear the previous interval and set a new one
             clearInterval(intervalId);
