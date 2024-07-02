@@ -13,7 +13,9 @@
             min-height: 100vh;
             background-color: #fbfcff;
             line-height: 1.5;
+            font-family: 'Fira Sans';
         }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -23,14 +25,17 @@
             color: #fbfcff;
             width: 100%;
         }
+
         nav a {
             color: #fbfcff;
             text-decoration: none;
             margin-right: 15px;
         }
+
         nav a:hover {
             color: #9bc13b; 
         }
+
         .container {
             flex: 1;
             display: flex;
@@ -39,6 +44,7 @@
             padding: 20px;
             width: 100%s;
         }
+
         .content {
             max-width: 800px;
             width: 100%;
@@ -48,13 +54,16 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .content p {
             text-align: left;
         }
+
         .credits {
             margin-top: 20px;
             margin-bottom: 10px;
         }
+
         footer {
             background-color: #212121;
             color: #fbfcff;
@@ -62,21 +71,24 @@
             text-align: center;
             width: 100%;
         }
+
         footer a {
             color: #fbfcff;
             text-decoration: none;
         }
+
         footer a:hover {
             color: #9bc13b;
         }
+
         /* Small screens (phones) */
         @media only screen and (max-width: 600px) {
             .content {
-                font-size: 14px;
+                font-size: 16px;
                 padding: 10px;
             }
             footer {
-                font-size: 12px;
+                font-size: 16px;
             }
             nav {
                 flex-direction: column;
@@ -87,15 +99,17 @@
                 margin: 5px 0;
             }
         }
+
         /* Medium screens (tablets) */
         @media only screen and (min-width: 601px) and (max-width: 1024px) {
             nav {
-                font-size: 14px;
+                font-size: 16px;
             }
             .content {
                 padding: 15px;
             }
         }
+        
         /* Large screens (laptops and desktops) */
         @media only screen and (min-width: 1025px) {
             nav {
