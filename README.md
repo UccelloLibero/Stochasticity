@@ -28,7 +28,7 @@ This web application displays a random image along with a random message on the 
 ## Deployment
 
 This project was developed as a personal learning project and is hosted on Heroku. 
-You can enjoy it here [Stochasticity](https://stochasticity-1bce0bf05f19.herokuapp.com/) 
+You can enjoy it here [Stochasticity](https://stochasticity.mcpherson.io). 
 
 ## License
 
