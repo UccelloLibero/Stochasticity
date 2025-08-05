@@ -1,5 +1,11 @@
 # Random Image and Message Web App
 
+![Demo screenshot of Stochasticity project](static/Stochasticity-demo1.png)
+
+![Demo screenshot of Stochasticity project](static/Stochasticity-demo2.png)
+
+![Demo screenshot of Stochasticity project](static/Stochasticity-demo3.png)
+
 This web application displays a random image along with a random message on the whole viewport. It uses Python, Flask, HTML JavaScript and AJAX.
 
 ## Features
